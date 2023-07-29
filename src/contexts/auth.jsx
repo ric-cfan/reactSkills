@@ -36,6 +36,7 @@ export const AuthProvider = ({ children }) => {
 
       localStorage.setItem("user", JSON.stringify(loggedUser));
       localStorage.setItem("username", usuario);
+      localStorage.setItem("password", password);
       localStorage.setItem("token", token);
 
       api.defaults.headers.Authorization = `Bearer ${token}`;
@@ -53,7 +54,10 @@ export const AuthProvider = ({ children }) => {
 
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    localStorage.removeItem("username");
+    if(!JSON.parse(localStorage.getItem("rememberMe"))) {
+      localStorage.removeItem("username");
+      localStorage.removeItem("password");
+    }
 
     api.defaults.headers.Authorization = null;
 

@@ -17,7 +17,7 @@ export const createUser = async (login, senha, confirmaSenha) => {
   try {
     console.log("createuser", {login, senha, confirmaSenha});
 
-    const {data} = api.post('/api/usuario', {login, senha, confirmaSenha});
+    const {data} = await api.post('/api/usuario', {login, senha, confirmaSenha});
     alert("Usuário criado com sucesso!")
     return data;
   }

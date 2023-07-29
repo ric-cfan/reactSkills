@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Navigate } from "react-router-dom";
 
 export const api = axios.create({
   baseURL: "http://localhost:8080",
@@ -27,9 +26,15 @@ export const createUser = async (login, senha, confirmaSenha) => {
 };
 
 export const createUserSkill = async (idUser, idSkill, lvl) => {
-  console.log("createuserskill", {idUser, idSkill, lvl});
+  const usuario = {
+    id: idUser
+  }
+  const skill = {
+    id: idSkill
+  }
+  console.log("createuserskill", {usuario, skill, lvl});
   const token = localStorage.getItem("token");
-  return api.post('/api/usuario', {idUser, idSkill, lvl}, { headers: {"Authorization": `${token}`},  "Accept": "application/json"});
+  return api.post('/api/usuarioSkill', {usuario, skill, lvl}, { headers: {"Authorization": `${token}`},  "Accept": "application/json"});
 };
 
 //gets
@@ -54,5 +59,12 @@ export const getUserSkills = async(idUser) => {
 
 export const updateUserSkill = async(idUserSkill, lvl) => {
   const token = localStorage.getItem("token");
-  return api.put(`/api/usuarioSkill/${idUserSkill}`, lvl, { headers: {"Authorization": `${token}`},  "Accept": "application/json"});
+  return api.put(`/api/usuarioSkill/${idUserSkill}`, {lvl}, { headers: {"Authorization": `${token}`},  "Accept": "application/json"});
+}
+
+//delete
+
+export const deleteUserSkill = async(idUserSkill) => {
+  const token = localStorage.getItem("token");
+  return api.delete(`/api/usuarioSkill/${idUserSkill}`, { headers: {"Authorization": `${token}`},  "Accept": "application/json"});
 }

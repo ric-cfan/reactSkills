@@ -96,8 +96,8 @@ const Home = () => {
           userSkills.map((userSkill) => (
             <li key={userSkill.id}>
               {userSkill.skill.nome} - {userSkill.skill.descricao} - {userSkill.lvl}- {userSkill.skill.urlImagem}
-              <button>EDITAR</button>
-              <button>DELETAR</button>
+              <button  type="button" onClick={() => updateSkill(userSkill.id, inputLvl)}>EDITAR</button>
+              <button  type="button" onClick={() => deleteSkill(userSkill.id)}>DELETAR</button>
             </li>
           ))
         }

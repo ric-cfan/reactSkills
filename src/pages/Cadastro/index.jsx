@@ -4,6 +4,9 @@ import './styles.css';
 import { createUser } from '../../services/api';
 import { Link, useNavigate } from 'react-router-dom';
 
+import Logo from '../../assets/Logo2.png'
+import Olho from '../../assets/eye.svg'
+
 const Cadastro = () => {
   const navigate = useNavigate();
   const [usuario, setUsuario] = useState("");
@@ -32,27 +35,42 @@ const Cadastro = () => {
   };
 
   return (
-    <div id="login">
-      <h1 className="title">Login do sistema</h1>
+    <div id="cadastro">
+
+      <img className='cadastro_img' src={Logo} alt="Logo do Projeto Skills"/>
+      
       <form className="form" onSubmit={handleSubmit}>
         <div className="field">
           <label htmlFor="usuario">Usuário</label>
           <input  name="usuario" id="usuario" value={usuario} onChange={(e) => setUsuario(e.target.value)} />
         </div>
-        <div className="field">
+
+        <div className="senhas_olho">
+          <div className="senhas">
           <label htmlFor="password">Senha</label>
-          <input type={passwordShown ? "text" : "password"} name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <div className="cadastro_senha">
+            <input type={passwordShown ? "text" : "password"} name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+
+          <div className="field">
+            <label htmlFor="password">Confirme sua senha</label>
+            <input type={passwordShown ? "text" : "password"} name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+          </div>
+          </div>
+
+          <button className='mostrar_botao' type="button" id="toogle" name="showPassword" onClick={togglePassword}>
+            <img src={Olho} style={{height:25, width:25}} alt="olho" />
+          </button>
         </div>
-        <div className="field">
-          <label htmlFor="password">Confirme sua senha</label>
-          <input type={passwordShown ? "text" : "password"} name="confirmPassword" id="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-        </div>
-        <button type="button" id="toogle" name="showPassword" onClick={togglePassword}>Show Password</button>
+
         <div className="actions">
           <button type="submit">Cadastrar</button>
         </div>
       </form>
-      <Link to="/">Retornar</Link>
+
+      <div className='link_cadastrar' >
+        <Link className='link'to="/login">Clique aqui para retornar</Link>
+      </div>
     </div>
   );
 }

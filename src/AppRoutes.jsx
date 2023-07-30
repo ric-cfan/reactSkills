@@ -35,6 +35,7 @@ const AppRoutes = () => {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/cadastro" element={<Cadastro />} />
           <Route exact path="/" element={<Private><Home /></Private>} />
+          <Route path="*" element={<h1>Erro 404: Página não encontrada</h1>} />
         </Routes>
       </AuthProvider>
     </Router>

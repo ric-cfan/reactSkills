@@ -27,12 +27,8 @@ export const AuthProvider = ({ children }) => {
     try {
       const response = await createSession(usuario, password);
 
-      console.log("login", response.data);
-
       const loggedUser = response.config.data;
       const token = response.headers.authorization;
-
-      console.log("config data", response.config.data)
 
       localStorage.setItem("user", JSON.stringify(loggedUser));
       localStorage.setItem("username", usuario);
@@ -50,10 +46,9 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    console.log("logout");
-
     localStorage.removeItem("user");
     localStorage.removeItem("token");
+    localStorage.removeItem("userId");
     if(!JSON.parse(localStorage.getItem("rememberMe"))) {
       localStorage.removeItem("username");
       localStorage.removeItem("password");

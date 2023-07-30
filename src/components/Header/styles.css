@@ -1,0 +1,38 @@
+.header__container {
+  background-image: linear-gradient(to right, #2e1313 , #040307);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 4em 1.5em 1.5em;
+  top:0;
+  height: 20vh;
+  min-width: 100vh;
+  border-bottom: 5px solid var(--preto-secundario);
+}
+
+.header__img {
+  width: 14.875em;
+  height: 6.25em;
+}
+
+.header__texto {
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 20px;
+  width: 8.5em;
+  line-height: 1.2em;
+}
+
+.header__botao {
+  margin-right: 6em;
+  background-color: transparent;
+  border: transparent;
+}
+
+.header__botao:hover {
+  cursor: pointer;
+}
+
+.header__botao-icone:hover {
+  filter: invert(80%) sepia(0%) saturate(3533%) hue-rotate(211deg) brightness(118%) contrast(87%);
+}

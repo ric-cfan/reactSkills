@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# FrontEnd React
+### Projeto de skills:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4> Um projeto de FrontEnd feito em React.</h4>
 
-## Available Scripts
+<p>Projeto criado segundo os requisitos mencionados por e-mail. Nesse site você pode pode se cadastrar, logar e criar uma lista de skills para seu usuário, podendo adicionar ou deletar skills da sua lista e até mesmo atualiza-las.</p>
 
-In the project directory, you can run:
+Ela foi gerada tendo em mente a seguinte API para seu uso: https://github.com/ric-cfan/apiSkills
+<br>
 
-### `npm start`
+`Requisitos:`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Tela de Login<br>
+a. Campo de Login<br>
+b. Campo de Senha<br>
+c. Botão de visualizar Senha<br>
+d. Checkbox de Gravar Senha<br>
+i. Caso o usuário marque essa opção, armazenar no storage para que no
+próximo acesso já apareça preenchido, e caso ele desmarque limpar o
+storage.<br>
+e. Botão de Entrar<br>
+i. Ao clicar deve chamar o endpoint de Login.<br>
+ii. Redirecionar para Home caso o Login esteja correto<br>
+f. Botão de Cadastrar-se
+2. Tela de Cadastrar-se<br>
+a. Campo de Login<br>
+b. Campo de Senha<br>
+c. Campo de Confirmar Senha<br>
+d. Botões para visualizar as senhas digitadas<br>
+e. Botão de Salvar<br>
+i. Deve validar se a Senha e Confirmar Senha são iguais<br>
+ii. Ao clicar deve chamar o endpoint de Cadastro<br>
+iii. Exibir uma mensagem de cadastro realizado com sucesso<br>
+3. Tela Home<br>
+a. Exibir lista de Skills que o usuário adicionou<br>
+i. A lista será composta pela imagem(url), nome da skill, level(version) e
+descrição<br>
+ii. O level deve ser possível editar na própria lista<br>
+iii. Também deve ter um botão de excluir a Skill da Lista<br>
+b. Botão de Adicionar Skill<br>
+i. Ao clicar no botão deve abrir uma modal de cadastro. Nessa modal terá:<br>
+1. Uma combo para o usuário escolher a skill<br>
+a. O conteúdo dessa combo vai ser retornada de um
+endpoint<br>
+2. Botão de Salvar
+3. Botão de Cancelar<br>
+c. Botão de Logout<br>
+4. Segurança<br>
+a. Não permitir o usuário acessar a página Home sem estar logado<br>
+5. Capriche no layout, pois o design também irá contar na avaliação<br>
+6. O projeto deve ser compartilhado no github num repositório público
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Imagens do Site:<h2>
+<br>
 
-### `npm test`
+<div align="center">
+<img src="https://iili.io/HZj8n5l.jpg" width="500px" height="250">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://iili.io/HZj8CJ4.jpg" width="500px" height="250">
 
-### `npm run build`
+<img src="https://iili.io/HZj8xbS.jpg" width="500px" height="250">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://iili.io/HZj8oe2.jpg)https://iili.io/HZj8oe2.jpg" width="500px" height="250">

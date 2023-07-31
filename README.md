@@ -60,4 +60,4 @@ a. Não permitir o usuário acessar a página Home sem estar logado<br>
 
 <img src="https://iili.io/HZj8xbS.jpg" width="500px" height="250">
 
-<img src="https://iili.io/HZj8oe2.jpg)https://iili.io/HZj8oe2.jpg" width="500px" height="250">
+<img src="https://iili.io/HZj8oe2.jpg" width="500px" height="250">

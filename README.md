@@ -5,7 +5,7 @@
 
 <p>Projeto criado segundo os requisitos mencionados por e-mail. Nesse site você pode pode se cadastrar, logar e criar uma lista de skills para seu usuário, podendo adicionar ou deletar skills da sua lista e até mesmo atualiza-las.</p>
 
-Ela foi gerada tendo em mente a seguinte API para seu uso: https://github.com/ric-cfan/apiSkills
+Ele foi gerado tendo em mente a seguinte API para seu uso: https://github.com/ric-cfan/apiSkills
 <br>
 
 `Requisitos:`
